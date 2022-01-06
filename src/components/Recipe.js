@@ -26,13 +26,11 @@ const RecipeContainer = styled.div`
     }
 `;
 
-const Para = styled.p`
+const Ol = styled.ol`
     border:0px;
     display:inline-block;
 
-    li {
-        list-style:none;
-    }
+    
 `;
 const Image = styled.img`
     width:400px;
@@ -55,9 +53,9 @@ const Recipe = ({title , calories , image , ingredientLines})=> {
     <RecipeContainer>
         <h1>{title}</h1>
         <p>Calories :{calories}</p>
-        <Para>Recipe :{ingredientLines.map(ingredient => (
+        <Ol>Recipe :{ingredientLines.map(ingredient => (
             <li key={ingredient.id}>{ingredient}</li>
-        ))}</Para>
+        ))}</Ol>
         <Image src={image} alt="recipe" />
         
         

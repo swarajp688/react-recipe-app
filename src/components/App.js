@@ -3,7 +3,7 @@ import styles from "./app.module.css";
 import Recipe from "./Recipe";
 
 import { useEffect, useState } from "react";
-import { APP_ID, APP_KEY } from "../../const";
+import { APP_ID, APP_KEY } from "../const";
 
 
 function App() {
@@ -55,7 +55,7 @@ function App() {
       
         {recipes.map((recipe) => (
           <Recipe
-            key={recipe.recipe.label}
+            key={recipe.recipe.id}
             title={recipe.recipe.label}
             calories={recipe.recipe.calories}
             image={recipe.recipe.image}
