@@ -3,7 +3,7 @@ import { FaHamburger } from "react-icons/fa";
 
 
 const Nav = styled.div`
-    background-color: #a1c4fd;
+    background-color: #E6EBF6;
     position:fixed;
     top:0px;
     margin:0px;

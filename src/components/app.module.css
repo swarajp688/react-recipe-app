@@ -1,7 +1,13 @@
 .App {
     margin: 0px;
     padding: 0px;
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-color: #E6EBF6;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    
 }
 
 .container {
@@ -12,12 +18,20 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+
 }
-
+.formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6EBF6;
+    height: 150px;
+    width: 100%;
+}
 .form {
-    margin: 40px 0px 80px 500px;
-    padding: 50px;
-
+    width: 350px;
+    z-index: 1;
+    
 }
 
 .input {
@@ -29,5 +43,15 @@
 .button {
     border: none;
     font-size: 1.2rem;
-    background: rgb(62, 180, 216);
+    color: white;
+    background: rgb(0, 0, 0);
 }
+@media only screen and (max-width: 1050px) {
+    .container {
+        width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        margin-left:10px;
+    }
+  }

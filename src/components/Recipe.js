@@ -1,7 +1,4 @@
-import { useEffect } from "react";
 import styled from "styled-components";
-
-
 
 const RecipeContainer = styled.div`
     display:flex;
@@ -10,9 +7,8 @@ const RecipeContainer = styled.div`
     width:40%;
     margin:10px;
     border-radius:20px;
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-image: linear-gradient(to right top, #a5c3e9, #bac9e7, #cad0e4, #d7d7e2, #e0e0e0);
     align-items: center;
-    
     h1 {
         display:inline-block;
         margin:0px;
@@ -24,16 +20,12 @@ const RecipeContainer = styled.div`
         font-weight:500;
         margin:5px;
         color:black;
-        
+        border-bottom: 1px solid grey;
     }
 `;
-
 const Image = styled.img`
-    width:400px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    margin-bottom:40px;
-    border-radius:20px;
-    
+    width:100%;
+    border-radius:0px 0px 20px 20px;
 `;
 const Recipe = ({title , calories , image})=> {
     
