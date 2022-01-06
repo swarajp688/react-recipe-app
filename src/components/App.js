@@ -3,7 +3,7 @@ import styles from "./app.module.css";
 import Recipe from "./Recipe";
 
 import { useEffect, useState } from "react";
-import { APP_ID, APP_KEY } from "../const";
+import { APP_ID, APP_KEY } from "../../const";
 
 
 function App() {
