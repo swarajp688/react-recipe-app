@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+import RecipeDetail from "./RecipeDetail";
 const RecipeContainer = styled.div`
     display:flex;
     flex-direction:column; 
@@ -9,6 +10,7 @@ const RecipeContainer = styled.div`
     border-radius:20px;
     background-image: linear-gradient(to right top, #a5c3e9, #bac9e7, #cad0e4, #d7d7e2, #e0e0e0);
     align-items: center;
+    
     h1 {
         display:inline-block;
         margin:0px;
@@ -20,20 +22,45 @@ const RecipeContainer = styled.div`
         font-weight:500;
         margin:5px;
         color:black;
-        border-bottom: 1px solid grey;
+        
+    }
+`;
+
+const Para = styled.p`
+    border:0px;
+    display:inline-block;
+
+    li {
+        list-style:none;
     }
 `;
 const Image = styled.img`
-    width:100%;
+    width:400px;
     border-radius:0px 0px 20px 20px;
+
 `;
-const Recipe = ({title , calories , image})=> {
+const Button = styled.button`
+    font-size:20px;
+    background:blue;
+    border:0px;
+    border-radius:10px 10px;
+    color:white;
+    margin:20px;
+    cursor:pointer;
+    padding:4px 20px;
+`;
+const Recipe = ({title , calories , image , ingredientLines})=> {
     
     return(
     <RecipeContainer>
         <h1>{title}</h1>
         <p>Calories :{calories}</p>
+        <Para>Recipe :{ingredientLines.map(ingredient => (
+            <li key={ingredient.id}>{ingredient}</li>
+        ))}</Para>
         <Image src={image} alt="recipe" />
+        
+        
     </RecipeContainer>)
 }
 
